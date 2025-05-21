@@ -31,11 +31,9 @@ lexis_LEACE_embeddings = LEACE_embeddings[lexis_idxs]
 # compute cosine similarity matrices
 wiki_original_similarity = sklearn.metrics.pairwise.cosine_similarity(wiki_original_embeddings)
 wiki_LEACE_similarity = sklearn.metrics.pairwise.cosine_similarity(wiki_LEACE_embeddings)
-wiki_similarity = sklearn.metrics.pairwise.cosine_similarity(wiki_original_embeddings, wiki_LEACE_embeddings)
 
 lexis_original_similarity = sklearn.metrics.pairwise.cosine_similarity(lexis_original_embeddings)
 lexis_LEACE_similarity = sklearn.metrics.pairwise.cosine_similarity(lexis_LEACE_embeddings)
-lexis_similarity = sklearn.metrics.pairwise.cosine_similarity(lexis_original_embeddings, lexis_LEACE_embeddings)
 
 
 def get_significant_pairs(S, T, delta= 99.99):
